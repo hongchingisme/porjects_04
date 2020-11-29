@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>對話紀錄視窗</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        html,body{
+            height: 100%;
+        }
+
+        body{
+            background-color: burlywood;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box{
+            width: 500px;
+            padding: 20px;
+            box-shadow: 0 0 30px darkgrey;
+            background-color: white;
+            
+           
+        }
+
+        .local{
+            justify-content: flex-end;
+        }
+
+        .user {
+            display: flex;
+            margin-bottom: 20px;
+            flex-shrink: 0;
+            align-items:flex-start ;
+            
+        }
+
+
+
+        .userbox{
+            width: 60px;
+            text-align: center;
+            flex-shrink: 0;
+            
+        }
+
+        .userbox .pic{
+            border-radius: 100%;
+            overflow: hidden;
+            
+        }
+
+
+        .userbox .pic img{
+            width: 100%;
+            vertical-align: middle;
+        }
+
+
+        .user .text{
+            
+            padding:16px;
+            border-radius: 10px;
+            position: relative ;
+            
+        }
+
+        .remote .text{
+           margin-left:20px ;
+           margin-right: 80px;
+           background-color: gray;
+           color: white;
+         
+           
+           
+        }
+
+        .local .text{
+            
+            margin-right: 20px;
+            margin-left: 80px;
+            order:-1;
+            background-color: mediumseagreen;
+            color:white;
+        }
+
+        .remote .text::before{
+            content: "";
+            position: absolute;
+            top:10px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid gray;
+            left:-10px;
+        }
+        
+        .local .text::before{
+            content: "";
+            position: absolute;
+            top:10px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid mediumseagreen;
+            right:-10px;
+        }
+
+        .name {
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="user remote">
+            <div class="userbox">
+                <div class="pic">
+                    <img src="img01.jpg">
+                </div>
+                <div class="name">丁丁</div>
+            </div>
+            <div class="text">
+                拉拉你猜猜看我口袋裡面有幾顆蘋果？
+                
+            </div>
+        </div>
+        <div class="user local">
+            <div class="userbox">
+                <div class="pic">
+                    <img src="img02.jpg">
+                </div>
+                <div class="name">拉拉</div>
+                
+            </div>
+            <div class="text">
+                嗯？有獎品嗎？
+                
+            </div>
+        </div>
+
+        <div class="user remote">
+            <div class="userbox">
+                <div class="pic">
+                    <img src="img01.jpg">
+                </div>
+                <div class="name">丁丁</div>
+            </div>
+            <div class="text">
+                你猜對的話我把裡面的五顆都給你
+                
+            </div>
+        </div>
+
+        <div class="user local">
+            <div class="userbox">
+                <div class="pic">
+                    <img src="img02.jpg">
+                </div>
+                <div class="name">拉拉</div>
+                
+            </div>
+            <div class="text">
+                嗯......
+                
+            </div>
+        </div>
+        <div class="user local">
+            <div class="userbox">
+                <div class="pic">
+                    <img src="img02.jpg">
+                </div>
+                <div class="name">拉拉</div>
+            </div>
+            <div class="text">
+                三顆！
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
